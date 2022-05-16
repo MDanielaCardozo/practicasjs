@@ -21,7 +21,7 @@ var persona2 = 'Daniela';
 document.write('<br>Persona: '+ persona);
 document.write('<br>Segunda persona: '+ persona2);
 
-// cambiar el valor de uan variable, no se repite let
+// cambiar el valor de una variable, no se repite let
 
 persona = 'Francisco';
 document.write('<br>Persona: '+ persona);
