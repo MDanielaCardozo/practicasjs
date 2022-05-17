@@ -8,7 +8,7 @@ if(frase.substring(0,1) === 'a' || frase.substring(0,1) === 'e' || frase.substri
 }
 
 if(frase.substring(1,1) === 'a' || frase.substring(1,1) === 'e' || frase.substring(1,1) === 'i' || frase.substring(1,1) === 'o' || frase.substring(1,1) === 'u'){
-    document.write(frase.substring(0,1))
+    document.write(frase.substring(1,1))
 }
 
 if(frase.substring(2,1) === 'a' || frase.substring(2,1) === 'e' || frase.substring(2,1) === 'i' || frase.substring(2,1) === 'o' || frase.substring(2,1) === 'u'){
