@@ -3,10 +3,11 @@
 let frase = prompt('Ingrese una frase de 5 caracteres');
 frase = frase.toLowerCase();
 // perro
+// length devuelve la cantidad de caracteres
 console.log(frase.length);
 console.log(frase.substring(0,5));
 
-for(let indice = 0; indice < 5; indice++){
+for(let indice = 0; indice < frase.length; indice++){
     if(frase.charAt(indice) === 'a' || frase.charAt(indice) === 'e' || frase.charAt(indice) === 'o'
 || frase.charAt(indice) === 'u'){
     document.write(frase.charAt(indice));
