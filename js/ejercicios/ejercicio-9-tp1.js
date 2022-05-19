@@ -1,6 +1,7 @@
 // 9.- Escribe un programa que pida una frase y escriba las vocales que aparecen
 
 let frase = prompt('Ingrese una frase de 5 caracteres');
+frase = frase.toLowerCase();
 // perro
 console.log(frase.length);
 console.log(frase.substring(0,5));
@@ -24,3 +25,5 @@ if(frase.substring(3,4) === 'a' || frase.substring(3,4) === 'e' || frase.substri
 if(frase.substring(4,5) === 'a' || frase.substring(4,5) === 'e' || frase.substring(4,5) === 'i' || frase.substring(4,5) === 'o' || frase.substring(4,5) === 'u'){
     document.write(frase.substring(4,5))
 }
+
+// if(frase.charAt(0) === 'a' || frase.charAt(0) === 'e')
