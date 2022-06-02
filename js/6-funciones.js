@@ -11,14 +11,29 @@ saludar();
 saludar();
 
 //funcion con parametros ( variable local/parametro, variable local/parametro)
-function saludarPersona(nombreRecibido, apellidoRecibido){
-    document.write(`<br>Hola mi nombre es: ${nombreRecibido} y mi apellido es: ${apellidoRecibido}`);
+// function saludarPersona(nombreRecibido, apellidoRecibido){
+//     document.write(`<br>Hola mi nombre es: ${nombreRecibido} y mi apellido es: ${apellidoRecibido}`);
+// }
+
+let saludarPersona = (nombre, apellidoRecibido) => {
+    document.write(`<br>Hola mi nombre es: ${nombreRecibido} y mi apellido es: ${apellidoRecibido}`)
 }
 
+
+
 //funcion que retorna valor (return ultima linea de codigo)
-function convertirDolaresAPesos(dolares){
+// function convertirDolaresAPesos(dolares){
+//     let pesosFinales = dolares * 210;
+//     console.log(pesosFinales)
+//     return pesosFinales;
+// }
+
+
+//ES6 arrow functions
+const convertirDolaresAPesos = (dolares) =>{
     let pesosFinales = dolares * 210;
-    return pesosFinales;
+       console.log(pesosFinales)
+       return pesosFinales;
 }
 
 let nombre = prompt('Ingrese un nombre');
@@ -26,9 +41,10 @@ let apellido = prompt('Ingrese apellido');
 let nombre1 = 'Jony'
 
 //fundamental el orden de las variables dentro de cada parametro
-saludarPersona(nombre,apellido);
+saludarPersona(nombre, apellido);
 saludarPersona('Daniela','Cardozo');
 saludarPersona(nombre1,'Perez')
 
 let pesosSinImpuestos = convertirDolaresAPesos(60); 
 document.write(`<br>Juego en $ ${pesosSinImpuestos}`);
+document.write(`<br>Juego en $ ${convertirDolaresAPesos(10)}`);
