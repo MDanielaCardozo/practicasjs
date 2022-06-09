@@ -15,7 +15,7 @@ saludar();
 //     document.write(`<br>Hola mi nombre es: ${nombreRecibido} y mi apellido es: ${apellidoRecibido}`);
 // }
 
-let saludarPersona = (nombre, apellidoRecibido) => {
+let saludarPersona = (nombreRecibido, apellidoRecibido) => {
     document.write(`<br>Hola mi nombre es: ${nombreRecibido} y mi apellido es: ${apellidoRecibido}`)
 }
 

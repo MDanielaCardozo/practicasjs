@@ -41,7 +41,7 @@ usuarioFrancisco.cambiarPassword();
 
 // crear un bucle que muestre todo el objeto
 let claves = Object.keys(usuarioFrancisco); // ['nombreUsuario', 'nombre', '...','cambiarPassword'] Object.keys convierte a la variable en un array (recorriendo sus datos).
-console.log(claves)
+console.log(claves);
 
 // crear un bucle que muestre todo el objeto
  for(let indice = 0; indice < claves.length; indice ++){
