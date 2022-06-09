@@ -51,13 +51,62 @@ class Usuario{
 // clase alumno que hereda de usuario
 class Alumno extends Usuario{
     // primer metodo 
-    constructor(comision, legajo, estado, nombre, apellido, nombreUsuario, password, email, direccion){
+    constructor(comision, legajo, estado, nombre, apellido, nombreUsuario, password, email, direccion = 'sin direccion'){
     // invocar al constructor de la clase usuario (super palabra reservada)
     super(nombreUsuario, nombre, apellido, email, password, direccion); 
     this.comision = comision;
     this.legajo = legajo;
-    this.estado = estado;
+    this.estado = estado; //true: activo, False: suspendido
+    this.asistencia = 0; //propiedad por defecto
+    this.notas = []; //propiedad por defecto
     }
+
+    mostrarAlumno(){
+        document.write(`<ul>
+        <li>Comision: ${this.comision}</li>
+        <li>Legajo: ${this.legajo}</li>
+        <li>Estado: ${this.estado}</li>
+        <li>Asistencia: ${this.asistencia}</li>
+        <li>Notas: ${this.notas}</li>
+        </ul>`)
+        // se puede invovar un metodo dentro de otro metodo (mostrarDatos)Pero quedaria separado de la lista
+    }
+
+    mostrarDatos(){
+        document.write(`<br>
+        <ul>
+        <li>Nombre: ${this.nombre}</li>
+        <li>Apellido: ${this.apellido}</li>
+        <li>Correo: ${this.correo}</li>
+        <li>Direccion: ${this.direccion}</li>
+        <li>Nombre usuario: ${this.nombreUsuario}</li>
+        <li>Comision: ${this.comision}</li>
+        <li>Legajo: ${this.legajo}</li>
+        <li>Estado: ${this.estado}</li>
+        <li>Asistencia: ${this.asistencia}</li>
+        <li>Notas: ${this.notas}</li>
+        </ul>`)
+    }
+
+    deshabilitar(){
+        this.estado = false;
+    }
+
+    habilitar(){
+        this.estado = true;
+    }
+
+    //get y set
+
+    set modificarEstado(nuevoEstado){
+        this.estado = nuevoEstado;
+    }
+
+    get mostrarEstado(){
+        return this.estado
+    }
+
+
 }
 
 
@@ -72,9 +121,20 @@ userJuan.mostrarDatos();
 
 document.write(`El nombre del usuario es ${userValentina.mostrarNombreUsuario}`);
 document.write(`<br>El nombre del usuario es ${userJuan.mostrarNombreUsuario} es ${userJuan.mostrarDireccion}`);
-
 userJuan.modificarDireccion = 'Tucuman';
 document.write(`<br>El nombre del usuario es ${userJuan.mostrarNombreUsuario} es ${userJuan.mostrarDireccion}`);
+
+let alumnoMauro = new Alumno ('2i', 1233, true, 'Mauro', 'Garcia', 'mgarcia', '2387934783hsui', 'mauro@gmail.com',);
+
+alumnoMauro.mostrarDatos();
+alumnoMauro.mostrarAlumno();
+console.log(alumnoMauro);
+
+console.log(alumnoMauro.mostrarDireccion);
+
+alumnoMauro.deshabilitar();
+console.log(alumnoMauro.mostrarEstado);
+
 
 
 
